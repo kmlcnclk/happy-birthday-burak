@@ -8,6 +8,7 @@ import Zoom from 'react-medium-image-zoom';
 
 export default function Home() {
   const [textColor, setTextColor] = useState(false);
+
   const images1 = ['/1.jpg', '/2.jpg', '/3.jpg'];
   const images2 = ['/4.jpg', '/5.jpg', '/6.jpg'];
   const images3 = ['/7.jpg', '/8.jpg', '/9.jpg'];
@@ -53,6 +54,10 @@ export default function Home() {
           </Head>
           <Confetti width={screen.width} height={screen.height} />
           <main>
+            <audio crossOrigin="anonymous" loop autoPlay hidden>
+              <source src="/music.mp3" type="audio/mpeg" />
+              Music <code>audio</code> Song
+            </audio>
             <div
               className={`flex flex-col items-center justify-center transition-all`}
             >
@@ -73,6 +78,8 @@ export default function Home() {
                     width={800}
                     height={500}
                     className="object-contain"
+                    priority={true}
+                    alt="Image"
                   />
                 </div>
               </Zoom>
@@ -88,6 +95,8 @@ export default function Home() {
                     width={800}
                     height={500}
                     className="object-contain"
+                    priority={true}
+                    alt="Image"
                   />
                 </div>
               </Zoom>
@@ -103,9 +112,21 @@ export default function Home() {
                     width={800}
                     height={500}
                     className="object-contain"
+                    priority={true}
+                    alt="Image"
                   />
                 </div>
               </Zoom>
+            </div>
+            <div className="bg-gray-400 p-1 rounded-lg lg:block fixed hidden left-10 bottom-10">
+              <NextImage
+                src="/korean-flag.jpg"
+                width={100}
+                height={100}
+                className="object-contain"
+                priority={true}
+                alt="Image"
+              />
             </div>
           </main>
         </div>

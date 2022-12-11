@@ -11,6 +11,8 @@ function Image({ url }) {
           width={300}
           height={500}
           className="object-contain"
+          priority={true}
+          alt="Image"
         />
       </Zoom>
     </div>
