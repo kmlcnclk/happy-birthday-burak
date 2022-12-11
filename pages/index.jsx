@@ -54,11 +54,13 @@ export default function Home() {
           </Head>
           <Confetti width={screen.width} height={screen.height} />
           <main>
+          <div className="flex justify-center items-center" >
             <audio crossOrigin="anonymous" loop autoPlay controls>
               <source src="/music.mp3" type="audio/mpeg" />
               Music <code>audio</code> Song
             </audio>
-            <div
+          </div>  
+          <div
               className={`flex flex-col items-center justify-center transition-all`}
             >
               <p
